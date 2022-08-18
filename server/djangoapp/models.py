@@ -43,9 +43,9 @@ class CarModel(models.Model):
     year = models.DateField(default=now)
 
     def __str__(self):
-        return "Name: " + self.name + "," + \
+        return "Name: " + str(self.name) + "," + \
                "Dealer ID: " + str(self.dealer_id) + "," + \
-               "Type: " + self.car_type + "," + \
+               "Type: " + str(self.car_type) + "," + \
                "Year: " + str(self.year)
 
 # <HINT> Create a plain Python class `CarDealer` to hold dealer data
@@ -81,7 +81,7 @@ class CarDealer:
         self.zip = zip
 
     def __str__(self):
-        return "Dealer name: " + self.full_name
+        return "Dealer name: " + str(self.full_name)
 
 # <HINT> Create a plain Python class `DealerReview` to hold review data
 class DealerReview:
@@ -113,4 +113,4 @@ class DealerReview:
         self.id = 0      
 
     def __str__(self):
-        return "Review: " + self.review
+        return "Review: " + str(self.review)
